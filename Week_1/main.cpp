@@ -89,20 +89,22 @@ public:
     };
     void a() {
         cout << "Output a: ";
-        if (DecimalNum >= 128 || DecimalNum <= -128)
+        if (DecimalNum >= 128)
         {
             cout << "overflow\n";
             return;
         } 
+        if (DecimalNum == 0) cout << "10000000 & ";
         cout << BinaryNum.setBit(0, isNegative) << "\n";
     }
     void b() {
         cout << "Output b: ";
-        if (DecimalNum >= 128 || DecimalNum <= -128)
+        if (DecimalNum >= 128)
         {
             cout << "overflow\n";
             return;
         } else if (!isNegative) {
+            if (DecimalNum == 0) cout << "11111111 & ";
             cout << BinaryNum << endl;
         } else {
             BinaryNumber result{~BinaryNum};
@@ -111,7 +113,7 @@ public:
     }
     void c() {
         cout << "Output c: ";
-        if (DecimalNum >= 128 || DecimalNum < -128)
+        if (DecimalNum > 128 || (!isNegative && DecimalNum >= 128))
         {
             cout << "overflow\n";
             return;
