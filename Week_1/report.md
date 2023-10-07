@@ -1,4 +1,9 @@
 # Data Representation Homework
+
+## Students
+1. Huỳnh Cao Tuấn Kiệt - 22127219
+2. Lý Đình Minh Mẫn - 22127255
+
 ## Main idea
 For each type of forms, we will have a boolean array consisting of 8 elements. An element will be marked `true` if the bit in that position is `1`, and be marked `false` otherwise.
 ### Sign-Manitude form
@@ -27,4 +32,25 @@ The `BinaryNumber` class is used to store user's input in a boolean array, and s
 
 It also supports adding one bit to the rightmost bit, change bit value at a given position, and flip the whole bit sequence.
 
-The `Solution` class is responsible for printing out the correct answer to the screen for each form.
+The `Solution` class is responsible for printing out the correct answer to the screen for each form, including checking for corner cases.
+
+## Source code
+
+[Google Drive](https://drive.google.com/drive/folders/1GZA6OcqzHJiUQBWD7haI-X58CnbJg9JL?usp=sharing)
+
+## Screenshots
+### 1. Valid inputs
+- Positive number:
+
+![Alt text](image.png)
+
+- Negative number:
+
+![Alt text](image-1.png)
+
+### 2. Out of Range Inputs
+![Alt text](image-3.png)
+![Alt text](image-2.png)
+
+### 3. Special Case
+![Alt text](image-4.png)
