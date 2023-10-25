@@ -10,87 +10,87 @@ prompt_input_close: .asciiz "] = "
 
 main:
 
-# load prompt
-li, $v0, 4
-la, $a0, prompt_n
-syscall
+	# load prompt
+	li, $v0, 4
+	la, $a0, prompt_n
+	syscall
 
-# read n
-li, $v0, 5
-syscall
-sw $v0, n
+	# read n
+	li, $v0, 5
+	syscall
+	sw $v0, n
 
-# init loop
-li $t0, 0
+	# init loop
+	li $t0, 0
 
-#load array address
-la $t1, array
+	#load array address
+	la $t1, array
 
-input_loop:
+	input_loop:
 
-#a[
-li, $v0, 4
-la, $a0, prompt_input_open
-syscall
+	#a[
+	li, $v0, 4
+	la, $a0, prompt_input_open
+	syscall
 
-#i
-li $v0, 1
-move $a0, $t0
-syscall
+	#i
+	li $v0, 1
+	move $a0, $t0
+	syscall
 
-#] = 
-li, $v0, 4
-la, $a0, prompt_input_close
-syscall
+	#] = 
+	li, $v0, 4
+	la, $a0, prompt_input_close
+	syscall
 
-#read a[i]
-li, $v0, 5
-syscall
+	#read a[i]
+	li, $v0, 5
+	syscall
 
-#store in array
-sw $v0, 0($t1)
+	#store in array
+	sw $v0, 0($t1)
 
 
 
-#loop counter add
-addi $t0, $t0, 1
+	#loop counter add
+	addi $t0, $t0, 1
 
-#move to array next address
-addi $t1, $t1, 4
+	#move to array next address
+	addi $t1, $t1, 4
 
-lw $t2, n
-beq $t0, $t2, end_input
+	lw $t2, n
+	beq $t0, $t2, end_input
 
-j input_loop
+	j input_loop
 
-end_input:
+	end_input:
 
-li $t0, 0
-la $t1, array
+	li $t0, 0
+	la $t1, array
 
-output_loop:
+	output_loop:
 
-lw $a0, 0($t1)
-#output a[i]
-li $v0, 1
-syscall
+	lw $a0, 0($t1)
+	#output a[i]
+	li $v0, 1
+	syscall
 
-#output the end line character
-li $v0, 11
-li $a0, 10
-syscall
+	#output the end line character
+	li $v0, 11
+	li $a0, 10
+	syscall
 
-addi $t0, $t0, 1
-addi $t1, $t1, 4
+	addi $t0, $t0, 1
+	addi $t1, $t1, 4
 
-lw $t2, n
-beq $t0, $t2, exit
-j output_loop
+	lw $t2, n
+	beq $t0, $t2, exit
+	j output_loop
 
-exit:
+	exit:
 
-li, $v0, 10
-syscall
+	li, $v0, 10
+	syscall
 
 
 
