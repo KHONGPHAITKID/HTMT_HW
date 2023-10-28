@@ -3,7 +3,7 @@
 Requirement: input an array and output it
 
 ## Main idea
-
+Pseudo code of the LOOP:
 ```
 Loop:
 + Display message 
