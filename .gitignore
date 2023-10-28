@@ -1,3 +1,5 @@
 output/
 Week_*/output/
 Week_*/test*
+*.DS_Store
+.obsidian

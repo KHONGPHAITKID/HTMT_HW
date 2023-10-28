@@ -1,4 +1,4 @@
-# Execise 2
+# Exercise 2
 
 Requirement: input a character and check whether it is uppercase or lowercase.
 

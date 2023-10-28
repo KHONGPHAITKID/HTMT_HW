@@ -1,4 +1,4 @@
-# Execise 4
+# Exercise 4
 
 Requirement: input a string and print the length of it, using an assembly program
 

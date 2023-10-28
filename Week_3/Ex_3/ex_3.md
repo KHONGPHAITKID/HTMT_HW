@@ -1,13 +1,15 @@
-# Execise 2
+# Exercise 3
 
 Requirement: input an array and output it
 
 ## Main idea
+
 Pseudo code of the LOOP:
+
 ```
 initialize i = 0, array_ptr = first address of the array
 Loop:
-+ Display message 
++ Display message
 
 + Do our task (input, store the value in the address, load the value, output the value, ...)
 
