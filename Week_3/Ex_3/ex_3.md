@@ -5,6 +5,7 @@ Requirement: input an array and output it
 ## Main idea
 Pseudo code of the LOOP:
 ```
+initialize i = 0, array_ptr = first address of the array
 Loop:
 + Display message 
 
